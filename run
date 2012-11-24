@@ -1,0 +1,6 @@
+#!/bin/sh
+CLASSP=../lib/Utility.jar:../lib/jruby.jar
+
+echo Execute ${1}.java
+# the variable $@ works because only the name is required in order to execute
+java -cp .:$CLASSP "$@"

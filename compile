@@ -1,0 +1,10 @@
+#!/bin/sh
+CLASSP=../lib/Utility.jar:../lib/jruby.jar
+
+if [ -f $1.class ]; then
+	echo "Removing old ${1}.class file"
+	rm $1.class
+fi
+
+echo Compile ${1}.java
+javac -cp .:$CLASSP $1.java
